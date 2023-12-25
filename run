@@ -1,0 +1,4 @@
+#!/bin/bash
+
+# docker compose build # Run this only when the Dockerfile is changed
+docker compose run iverilog     # Run simulation and view waveform using defalut docker compose command directive

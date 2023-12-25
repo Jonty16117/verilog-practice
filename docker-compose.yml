@@ -1,0 +1,12 @@
+version: '3'
+services:
+  iverilog:
+    build:
+      context: .
+    volumes:
+      - .:/app
+      - /tmp/.X11-unix:/tmp/.X11-unix
+    environment:
+      - DISPLAY=$DISPLAY
+    command: /app/simulate.sh my_design.v my_testbench.v -w
+    
