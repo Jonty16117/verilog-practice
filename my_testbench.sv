@@ -20,10 +20,10 @@ module testbench;
         $dumpfile("my_waveform.vcd");
         $dumpvars(0, testbench);
 
-        // Test scenario 1
-        a = 1;
+        // Test scenario 1 
+        a = 0;
         b = 0;
-        select = 0;
+        select = 1;
         #10;
 
         // Test scenario 2

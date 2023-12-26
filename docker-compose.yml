@@ -1,6 +1,7 @@
 version: '3'
 services:
   iverilog:
+    container_name: iverilog
     build:
       context: .
     volumes:
@@ -8,5 +9,5 @@ services:
       - /tmp/.X11-unix:/tmp/.X11-unix
     environment:
       - DISPLAY=$DISPLAY
-    command: /app/simulate.sh my_design.v my_testbench.v -w
+    # command: /app/simulate.sh my_design.sv my_testbench.sv -w
     

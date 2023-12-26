@@ -1,4 +1,5 @@
 #!/bin/bash
 
+# xhost + # Run this if display access is off and unable to launch gtk wave
 # docker compose build # Run this only when the Dockerfile is changed
 docker compose run iverilog     # Run simulation and view waveform using defalut docker compose command directive

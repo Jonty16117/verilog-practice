@@ -11,10 +11,14 @@ RUN apt-get update && apt-get install -y \
 WORKDIR /app
 
 # Copy your Verilog files to the container
-COPY . /app
+# COPY . /app
 
 # Set execute permissions for the script
-RUN chmod +x /app/simulate.sh
+# RUN chmod +x /app/simulate.sh
 
 # Command to run when the container starts
-CMD ["/bin/bash"]
+# CMD ["/bin/bash"]
+# ENTRYPOINT ["tail", "-f","/dev/null"]
+
+# ENTRYPOINT ["/app/simulate.sh", "my_design.sv","my_testbench.sv", "-w"]
+ENTRYPOINT ["/app/simulate.sh"]
