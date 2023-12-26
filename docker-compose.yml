@@ -8,6 +8,4 @@ services:
       - .:/app
       - /tmp/.X11-unix:/tmp/.X11-unix
     environment:
-      - DISPLAY=$DISPLAY
-    # command: /app/simulate.sh my_design.sv my_testbench.sv -w
-    
+      - DISPLAY=$DISPLAY    

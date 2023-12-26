@@ -1,12 +1,3 @@
 {
     "C_Cpp.errorSquiggles": "disabled"
-    // Add this setting in your workspace or in your folder settings
-    // "emeraldwalk.runonsave": {
-    //   "commands": [
-    //     {
-    //       "match": "\\.sv$",
-    //       "cmd": "docker exec iverilog sh -c \"/app/generate-wave.sh my_design.sv my_testbench.sv -w\""
-    //     }
-    //   ]
-    // }
 }
