@@ -23,7 +23,7 @@ module testbench;
         // Test scenario 1 
         a = 0;
         b = 0;
-        select = 1;
+        select = 0;
         #10;
 
         // Test scenario 2

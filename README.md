@@ -99,3 +99,5 @@ read x_value y_value <<< $(echo $(xdotool getmouselocation | grep -oP 'x:\K\d+')
 
 read x_value y_value <<< $(echo $(xdotool getmouselocation | grep -oP 'x:\\K\\d+') $(xdotool getmouselocation | grep -oP 'y:\\K\\d+')); xdotool keydown Ctrl keydown F9 keyup F9 keyup Ctrl && sleep 0.5 && xdotool keydown Ctrl keydown F9 keyup F9 keyup Ctrl && xdotool mousemove --sync $x_value $y_value
 
+----
+
