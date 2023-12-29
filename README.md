@@ -61,3 +61,28 @@ read x_value y_value <<< $(echo $(xdotool getmouselocation | grep -oP 'x:\\K\\d+
 
 ----
 
+# Compile Verilog code
+iverilog -o my_simulation.vvp -g2012 "${files[@]}"
+
+# Run simulation
+vvp my_simulation.vvp
+
+-----
+iverilog -o my_simulation.vvp -g2012 mux1bit2to1.sv mux2bit2to1.sv my_testbench.sv && vvp my_simulation.vvp
+
+iverilog -o my_simulation.vvp -g2012 addorsub.sv my_testbench.sv && vvp my_simulation.vvp
+
+iverilog -o my_simulation.vvp -g2012 switchcaseNbit4to1mux.sv switchcaseNbit4to1mux_testbench.sv && vvp my_simulation.vvp
+
+iverilog -o my_simulation.vvp -g2012 srlatch.sv srlatch_testbench.sv && vvp my_simulation.vvp
+
+iverilog -o my_simulation.vvp -g2012 srlatchnor.sv srlatchnor_testbench.sv && vvp my_simulation.vvp
+
+
+iverilog -o my_simulation.vvp -g2012 srlatchnor.sv srlatchnor_testbench.sv && vvp my_simulation.vvp
+
+
+iverilog -o my_simulation.vvp -g2012 dlatchnand.sv dlatchnand_testbench.sv && vvp my_simulation.vvp
+
+
+<!-- gtkwave my_waveform.vcd -->
