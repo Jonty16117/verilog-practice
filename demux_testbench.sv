@@ -1,17 +1,17 @@
 module testbench;
 
     // Inputs
-    reg En, D, Q, Qn;
+    reg S, D;
 
     // Output
-    wire [3:0] o;
+    wire Y1, Y2;
 
     // Instantiate the design
-    dlatchnand srlatchnor_unit (
-      .En(En),
+    demux demux_unit (
+      .S(S),
       .D(D),
-      .Q(Q),
-      .Qn(Qn)
+      .Y1(Y1),
+      .Y2(Y2)
     );
 
     // Initial block for testbench stimulus
@@ -20,29 +20,20 @@ module testbench;
         $dumpvars(0, testbench);
 
         // Initialize Inputs
+        S = 1;
+        #100
+        D = 1;
         
-        En = 1;
-        D = 0;
-
-        // Add stimulus here
         #100
-        #100
-        En = 0;
-        D = 1;
-
-        #100
-        En = 1;
-        D = 1;
-
-        #100
-        En = 0;
         D = 0;
 
         #100
-        D = 1;
-
+        
+        S = 0;
         #100
-        En = 1;
+        D = 1;
+        
+        #100
         D = 0;
 
         #100

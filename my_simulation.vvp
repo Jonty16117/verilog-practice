@@ -1,80 +1,55 @@
 #! /usr/bin/vvp
 :ivl_version "11.0 (stable)";
 :ivl_delay_selection "TYPICAL";
-:vpi_time_precision - 12;
+:vpi_time_precision + 0;
 :vpi_module "/usr/lib/x86_64-linux-gnu/ivl/system.vpi";
 :vpi_module "/usr/lib/x86_64-linux-gnu/ivl/vhdl_sys.vpi";
 :vpi_module "/usr/lib/x86_64-linux-gnu/ivl/vhdl_textio.vpi";
 :vpi_module "/usr/lib/x86_64-linux-gnu/ivl/v2005_math.vpi";
 :vpi_module "/usr/lib/x86_64-linux-gnu/ivl/va_math.vpi";
 :vpi_module "/usr/lib/x86_64-linux-gnu/ivl/v2009.vpi";
-S_0x55abd651f8c0 .scope package, "$unit" "$unit" 2 1;
+S_0x55bdcd9d5930 .scope package, "$unit" "$unit" 2 1;
  .timescale 0 0;
-S_0x55abd651fa50 .scope module, "testbench" "testbench" 3 1;
- .timescale -9 -12;
-v0x55abd6534b20_0 .var "D", 0 0;
-v0x55abd6534be0_0 .var "En", 0 0;
-v0x55abd6534c80_0 .net "Q", 0 0, L_0x55abd6534df0;  1 drivers
-v0x55abd6534d20_0 .net "Qn", 0 0, L_0x55abd6534e60;  1 drivers
-S_0x55abd650eef0 .scope module, "srlatchnor_unit" "dlatchnand" 3 10, 4 2 0, S_0x55abd651fa50;
- .timescale -9 -12;
-    .port_info 0 /INPUT 1 "En";
-    .port_info 1 /INPUT 1 "D";
-    .port_info 2 /OUTPUT 1 "Q";
-    .port_info 3 /OUTPUT 1 "Qn";
-L_0x55abd6534df0 .functor BUFZ 1, L_0x55abd6535300, C4<0>, C4<0>, C4<0>;
-L_0x55abd6534e60 .functor BUFZ 1, L_0x55abd6535540, C4<0>, C4<0>, C4<0>;
-L_0x55abd6534f20/d .functor NAND 1, v0x55abd6534be0_0, v0x55abd6534b20_0, C4<1>, C4<1>;
-L_0x55abd6534f20 .delay 1 (1000,1000,1000) L_0x55abd6534f20/d;
-L_0x55abd6535100 .functor NOT 1, v0x55abd6534b20_0, C4<0>, C4<0>, C4<0>;
-L_0x55abd65351a0/d .functor NAND 1, v0x55abd6534be0_0, L_0x55abd6535100, C4<1>, C4<1>;
-L_0x55abd65351a0 .delay 1 (1000,1000,1000) L_0x55abd65351a0/d;
-L_0x55abd6535300/d .functor NAND 1, L_0x55abd6535540, L_0x55abd6534f20, C4<1>, C4<1>;
-L_0x55abd6535300 .delay 1 (1000,1000,1000) L_0x55abd6535300/d;
-L_0x55abd6535540/d .functor NAND 1, L_0x55abd6535300, L_0x55abd65351a0, C4<1>, C4<1>;
-L_0x55abd6535540 .delay 1 (1000,1000,1000) L_0x55abd6535540/d;
-v0x55abd650f0f0_0 .net "D", 0 0, v0x55abd6534b20_0;  1 drivers
-v0x55abd6534450_0 .net "En", 0 0, v0x55abd6534be0_0;  1 drivers
-v0x55abd6534510_0 .net "Q", 0 0, L_0x55abd6534df0;  alias, 1 drivers
-v0x55abd65345b0_0 .net "Q_int", 0 0, L_0x55abd6535300;  1 drivers
-v0x55abd6534670_0 .net "Qn", 0 0, L_0x55abd6534e60;  alias, 1 drivers
-v0x55abd6534780_0 .net "Qn_int", 0 0, L_0x55abd6535540;  1 drivers
-v0x55abd6534840_0 .net *"_ivl_6", 0 0, L_0x55abd6535100;  1 drivers
-v0x55abd6534920_0 .net "d_int", 0 0, L_0x55abd6534f20;  1 drivers
-v0x55abd65349e0_0 .net "dn_int", 0 0, L_0x55abd65351a0;  1 drivers
-    .scope S_0x55abd651fa50;
+S_0x55bdcd9d5ac0 .scope module, "testbench" "testbench" 3 1;
+ .timescale 0 0;
+v0x55bdcd9e8610_0 .var "data_in", 3 0;
+v0x55bdcd9e86d0_0 .net "data_out", 1 0, L_0x55bdcd9e8aa0;  1 drivers
+S_0x55bdcd99bcf0 .scope module, "encoder_unit" "encoder" 3 7, 4 1 0, S_0x55bdcd9d5ac0;
+ .timescale 0 0;
+    .port_info 0 /INPUT 4 "data_in";
+    .port_info 1 /OUTPUT 2 "data_out";
+L_0x55bdcd9e8960 .functor OR 1, L_0x55bdcd9e87a0, L_0x55bdcd9e88c0, C4<0>, C4<0>;
+L_0x55bdcd9e8d50 .functor OR 1, L_0x55bdcd9e8be0, L_0x55bdcd9e8cb0, C4<0>, C4<0>;
+v0x55bdcd9d5c50_0 .net *"_ivl_12", 0 0, L_0x55bdcd9e8be0;  1 drivers
+v0x55bdcd9e7f60_0 .net *"_ivl_14", 0 0, L_0x55bdcd9e8cb0;  1 drivers
+v0x55bdcd9e8040_0 .net *"_ivl_15", 0 0, L_0x55bdcd9e8d50;  1 drivers
+v0x55bdcd9e8100_0 .net *"_ivl_3", 0 0, L_0x55bdcd9e87a0;  1 drivers
+v0x55bdcd9e81e0_0 .net *"_ivl_5", 0 0, L_0x55bdcd9e88c0;  1 drivers
+v0x55bdcd9e8310_0 .net *"_ivl_6", 0 0, L_0x55bdcd9e8960;  1 drivers
+v0x55bdcd9e83f0_0 .net "data_in", 3 0, v0x55bdcd9e8610_0;  1 drivers
+v0x55bdcd9e84d0_0 .net "data_out", 1 0, L_0x55bdcd9e8aa0;  alias, 1 drivers
+L_0x55bdcd9e87a0 .part v0x55bdcd9e8610_0, 1, 1;
+L_0x55bdcd9e88c0 .part v0x55bdcd9e8610_0, 3, 1;
+L_0x55bdcd9e8aa0 .concat8 [ 1 1 0 0], L_0x55bdcd9e8960, L_0x55bdcd9e8d50;
+L_0x55bdcd9e8be0 .part v0x55bdcd9e8610_0, 2, 1;
+L_0x55bdcd9e8cb0 .part v0x55bdcd9e8610_0, 3, 1;
+    .scope S_0x55bdcd9d5ac0;
 T_0 ;
-    %vpi_call/w 3 19 "$dumpfile", "my_waveform.vcd" {0 0 0};
-    %vpi_call/w 3 20 "$dumpvars", 32'sb00000000000000000000000000000000, S_0x55abd651fa50 {0 0 0};
-    %pushi/vec4 1, 0, 1;
-    %store/vec4 v0x55abd6534be0_0, 0, 1;
-    %pushi/vec4 1, 0, 1;
-    %store/vec4 v0x55abd6534b20_0, 0, 1;
-    %delay 100000, 0;
-    %pushi/vec4 0, 0, 1;
-    %store/vec4 v0x55abd6534be0_0, 0, 1;
-    %pushi/vec4 1, 0, 1;
-    %store/vec4 v0x55abd6534b20_0, 0, 1;
-    %delay 100000, 0;
-    %pushi/vec4 1, 0, 1;
-    %store/vec4 v0x55abd6534be0_0, 0, 1;
-    %pushi/vec4 1, 0, 1;
-    %store/vec4 v0x55abd6534b20_0, 0, 1;
-    %delay 100000, 0;
-    %pushi/vec4 0, 0, 1;
-    %store/vec4 v0x55abd6534be0_0, 0, 1;
-    %pushi/vec4 0, 0, 1;
-    %store/vec4 v0x55abd6534b20_0, 0, 1;
-    %delay 100000, 0;
-    %pushi/vec4 1, 0, 1;
-    %store/vec4 v0x55abd6534b20_0, 0, 1;
-    %delay 100000, 0;
-    %pushi/vec4 1, 0, 1;
-    %store/vec4 v0x55abd6534be0_0, 0, 1;
-    %pushi/vec4 0, 0, 1;
-    %store/vec4 v0x55abd6534b20_0, 0, 1;
-    %delay 100000, 0;
-    %vpi_call/w 3 49 "$finish" {0 0 0};
+    %vpi_call/w 3 14 "$dumpfile", "my_waveform.vcd" {0 0 0};
+    %vpi_call/w 3 15 "$dumpvars", 32'sb00000000000000000000000000000000, S_0x55bdcd9d5ac0 {0 0 0};
+    %pushi/vec4 1, 0, 4;
+    %store/vec4 v0x55bdcd9e8610_0, 0, 4;
+    %delay 100, 0;
+    %pushi/vec4 2, 0, 4;
+    %store/vec4 v0x55bdcd9e8610_0, 0, 4;
+    %delay 100, 0;
+    %pushi/vec4 4, 0, 4;
+    %store/vec4 v0x55bdcd9e8610_0, 0, 4;
+    %delay 100, 0;
+    %pushi/vec4 8, 0, 4;
+    %store/vec4 v0x55bdcd9e8610_0, 0, 4;
+    %delay 100, 0;
+    %vpi_call/w 3 27 "$finish" {0 0 0};
     %end;
     .thread T_0;
 # The file index is used to find the file name in the following table.
@@ -82,5 +57,5 @@ T_0 ;
     "N/A";
     "<interactive>";
     "-";
-    "dlatchnand_testbench.sv";
-    "dlatchnand.sv";
+    "encoder_testbench.sv";
+    "encoder.sv";

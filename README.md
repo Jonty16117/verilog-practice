@@ -84,5 +84,12 @@ iverilog -o my_simulation.vvp -g2012 srlatchnor.sv srlatchnor_testbench.sv && vv
 
 iverilog -o my_simulation.vvp -g2012 dlatchnand.sv dlatchnand_testbench.sv && vvp my_simulation.vvp
 
+iverilog -o my_simulation.vvp -g2012 demux.sv demux_testbench.sv && vvp my_simulation.vvp
+
+iverilog -o my_simulation.vvp -g2012 decoder.sv decoder_testbench.sv && vvp my_simulation.vvp
+
+
+iverilog -o my_simulation.vvp -g2012 encoder.sv encoder_testbench.sv && vvp my_simulation.vvp
+
 
 <!-- gtkwave my_waveform.vcd -->

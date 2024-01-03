@@ -1,4 +1,3 @@
-`timescale 1ns / 1ps
 module dlatchnand (
     input En, D,
     output Q, Qn

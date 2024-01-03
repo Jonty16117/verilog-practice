@@ -1,3 +1,5 @@
 #!/bin/bash
 
-gtkwave my_waveform.vcd
+sleep infinity
+
+# gtkwave my_waveform.vcd
