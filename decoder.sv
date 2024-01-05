@@ -8,6 +8,8 @@ module decoder (
     assign o[2] = A0 & ~A1;
     assign o[3] = A0 & A1;
 
+    assign clk_div = rst ? 0 : !clk_div;
+
 endmodule
 
 // module decoder (
